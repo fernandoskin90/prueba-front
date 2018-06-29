@@ -1,0 +1,20 @@
+.login {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+
+    a {
+        border: solid violet 3px;
+        border-radius: 8px;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 20px;
+        text-decoration: none;
+
+        &:hover {
+            background: #00BAE9;
+            color: #fff;
+        }
+    }
+}

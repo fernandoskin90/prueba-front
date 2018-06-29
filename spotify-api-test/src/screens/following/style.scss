@@ -1,0 +1,141 @@
+.following {
+    &__loader {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+    }
+
+    &__artist {
+        box-shadow:
+            0px 1px 3px 0px 
+            rgba(0, 0, 0, 0.2), 
+            0px 1px 1px 0px 
+            rgba(0, 0, 0, 0.14),
+            0px 2px 1px -1px 
+            rgba(0, 0, 0, 0.12);
+        display: grid;
+        grid-gap: 5px;
+        height: 300px;
+        margin: 10px auto;
+        padding: 5px;
+        width: 95%;
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+
+        &__name {
+            align-items: center;
+            display: flex;
+            font-size: 2.2rem;
+            font-weight: bold;
+            justify-content: center;
+        }
+
+
+        &__followers, &__genders {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+
+            &--number {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-right: 5px;
+            }
+
+            &--label {
+                font-size: 1.1rem;
+                margin-left: 5px;
+            }
+        }
+
+        &__image {
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+// desktop and tablet
+@media (min-width: 413px) {
+    .following {
+        &__artist {
+            grid-template-rows: repeat(3, 1fr);
+
+            &__name {
+                align-items: flex-end;
+                display: flex;
+                font-size: 2.4rem;
+                grid-column: 1 / span 1;
+                grid-row: 1 / span 1;
+            }
+
+            &__followers, &__genders {
+                &--number {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    margin-right: 5px;
+                }
+    
+                &--label {
+                    font-size: 1.5rem;
+                    margin-left: 5px;
+                }
+            }
+
+            &__followers {
+                align-items: flex-end;
+                display: flex;
+                font-size: 1.6rem;
+                grid-column: 1 / span 1;
+                grid-row: 2 / span 1;
+            }
+
+            &__genders {
+                align-items: flex-start;
+                display: flex;
+                grid-column: 1 / span 1;
+                grid-row: 3 / span 1;
+            }
+
+            &__image {
+                grid-column: 2 / span 1;
+                grid-row: 1 / span 3;
+            }
+        }
+    }
+}
+
+// phone
+@media (max-width: 412px) {
+    .following {
+        &__artist {
+            &__name {
+                align-items: center;
+                display: flex;
+                font-size: 1.5rem;
+                font-weight: bold;
+                grid-column: 1 / span 2; 
+                grid-row: 1 / span 2;
+                justify-content: center;
+            }
+
+            &__image {
+                grid-column: 1 / span 2;
+                grid-row: 3 / span 8;
+            }
+
+            &__followers {
+                grid-column: 1 / span 1;
+                grid-row: 11 / span 2;
+            }
+
+            &__genders {
+                grid-column: 2 / span 1;
+                grid-row: 11 / span 2;
+            }
+        }
+    }
+}

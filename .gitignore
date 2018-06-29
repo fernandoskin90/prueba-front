@@ -1,0 +1,5 @@
+.DS_STORE
+server/node_modules
+spotify-api-test/node_modules
+*.lock
+*.log
